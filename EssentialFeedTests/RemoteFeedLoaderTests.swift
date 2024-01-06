@@ -7,29 +7,36 @@
 
 import XCTest
 
-final class RemoteFeedLoaderTests: XCTestCase {
+class RemoteFeedLoader {
+  func load() {
+    HTTPClient.shared.requestedURL = URL(string: "https://a-url.com")
+  }
+}
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+class HTTPClient {
+  static let shared = HTTPClient()
+  private init() {}
+  var requestedURL: URL?
+}
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+class RemoteFeedLoaderTests: XCTestCase {
+  func test_init_doesNotRequestDataFromURL() {
+    let client = HTTPClient.shared
+    _ = RemoteFeedLoader()
+    
+    XCTAssertNil(client.requestedURL)
+  }
+  
+  func test_load_requestDataFromURL() {
+    // Arrange: "Given a client and a sut..."
+    let client = HTTPClient.shared
+    let sut = RemoteFeedLoader()
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+    // Act: "When we invoke `sut.load()`..."
+    sut.load()
+    
+    // Assert: "Assert that a URL request was initiated in the client"
+    XCTAssertNotNil(client.requestedURL)
+    
+  }
 }
