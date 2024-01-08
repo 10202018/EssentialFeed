@@ -9,15 +9,14 @@ import XCTest
 
 class RemoteFeedLoader {
   let client: HTTPClient
+  let url: URL
   
-  init(client: HTTPClient) {
+  init(client: HTTPClient, url: URL) {
     self.client = client
+    self.url = url
   }
   func load() {
-    // A common technique we see in testing to be able to mock Singletons is to
-    // is to make the shared instance a variable
-    // HTTPClient.shared.requestedURL = URL(string: "https://a-url.com")
-    client.get(from: URL(string: "https://a-url.com")!)
+    client.get(from: url)
   }
 }
 
@@ -35,22 +34,25 @@ class HTTPClientSpy: HTTPClient {
 
 class RemoteFeedLoaderTests: XCTestCase {
   func test_init_doesNotRequestDataFromURL() {
+    let url = URL(string: "https://a-url.com")!
     let client = HTTPClientSpy()
-    _ = RemoteFeedLoader(client: client)
+    _ = RemoteFeedLoader(client: client, url: url)
     
     XCTAssertNil(client.requestedURL)
   }
   
   func test_load_requestDataFromURL() {
     // Arrange: "Given a client and a sut..."
+    let url = URL(string: "https://a-given-url.com")!
     let client = HTTPClientSpy()
-    let sut = RemoteFeedLoader(client: client)
+    let sut = RemoteFeedLoader(client: client, url: url)
 
     // Act: "When we invoke `sut.load()`..."
     sut.load()
     
     // Assert: "Assert that a URL request was initiated in the client"
-    XCTAssertNotNil(client.requestedURL)
+    
+    XCTAssertEqual(client.requestedURL, url)
     
   }
 }
