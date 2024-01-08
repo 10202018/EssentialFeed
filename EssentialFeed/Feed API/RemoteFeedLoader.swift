@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol HTTPClient {
-  var requestedURL: URL? { get }
+  var requestedURLs: [URL] { get set }
   
   func get(from url: URL)
 }
