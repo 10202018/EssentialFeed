@@ -16,6 +16,7 @@
 		5BC6EDA32B49E90400E486E6 /* RemoteFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC6EDA22B49E90400E486E6 /* RemoteFeedLoaderTests.swift */; };
 		5BC6EDA62B4C9DA000E486E6 /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC6EDA52B4C9DA000E486E6 /* RemoteFeedLoader.swift */; };
 		5BF47DC12B598ACF00E522CB /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF47DC02B598ACF00E522CB /* HTTPClient.swift */; };
+		5BF47DC32B598B3B00E522CB /* FeedItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF47DC22B598B3B00E522CB /* FeedItemsMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		5BC6EDA22B49E90400E486E6 /* RemoteFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTests.swift; sourceTree = "<group>"; };
 		5BC6EDA52B4C9DA000E486E6 /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 		5BF47DC02B598ACF00E522CB /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		5BF47DC22B598B3B00E522CB /* FeedItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				5BC6EDA52B4C9DA000E486E6 /* RemoteFeedLoader.swift */,
+				5BF47DC22B598B3B00E522CB /* FeedItemsMapper.swift */,
 				5BF47DC02B598ACF00E522CB /* HTTPClient.swift */,
 			);
 			path = "Feed API";
@@ -228,6 +231,7 @@
 				5BC6EDA62B4C9DA000E486E6 /* RemoteFeedLoader.swift in Sources */,
 				5BF47DC12B598ACF00E522CB /* HTTPClient.swift in Sources */,
 				5BC6ED9E2B49143000E486E6 /* FeedLoader.swift in Sources */,
+				5BF47DC32B598B3B00E522CB /* FeedItemsMapper.swift in Sources */,
 				5BC6ED9C2B490C0500E486E6 /* FeedItem.swift in Sources */,
 				5BC6ED862B490BE200E486E6 /* EssentialFeed.docc in Sources */,
 			);
