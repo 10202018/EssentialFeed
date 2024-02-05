@@ -57,6 +57,7 @@
 		5BC6EDA52B4C9DA000E486E6 /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 		5BD686FE2B6DAE3D009C1785 /* EssentialFeedAPIEndToEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedAPIEndToEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BD687002B6DAE3E009C1785 /* EssentialFeedAPIEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedAPIEndToEndTests.swift; sourceTree = "<group>"; };
+		5BD687092B719CCD009C1785 /* CI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI.xctestplan; sourceTree = "<group>"; };
 		5BF47DC02B598ACF00E522CB /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		5BF47DC22B598B3B00E522CB /* FeedItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +100,7 @@
 		5BC6ED772B490BE200E486E6 = {
 			isa = PBXGroup;
 			children = (
+				5BD687092B719CCD009C1785 /* CI.xctestplan */,
 				5BC6ED832B490BE200E486E6 /* EssentialFeed */,
 				5BC6ED8F2B490BE200E486E6 /* EssentialFeedTests */,
 				5BD686FF2B6DAE3E009C1785 /* EssentialFeedAPIEndToEndTests */,
